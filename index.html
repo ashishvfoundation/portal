@@ -21,8 +21,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-  <style>
- * {
+<style>
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -55,6 +55,16 @@ header, .container, .footer, .section-box, .tagline, .director {
 @keyframes slideFade {
   0% { opacity: 0; transform: translateX(-50px); }
   100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes bounceGlow {
+  0%, 100% {
+    transform: scale(1);
+    text-shadow: 0 0 10px #00bcd4;
+  }
+  50% {
+    transform: scale(1.05);
+    text-shadow: 0 0 16px #ff4081;
+  }
 }
 
 header {
@@ -163,11 +173,12 @@ li::before {
 }
 .itkg-code {
   font-weight: bold;
-  color: #ffffff;
-  background: linear-gradient(90deg, #ffa726, #fb8c00);
+  color: #ff8c00;
+  border: 2px solid #ff9800;
   padding: 6px 12px;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(255, 193, 7, 0.6);
+  background: transparent;
+  box-shadow: none;
 }
 
 .dual-section {
@@ -182,11 +193,13 @@ li::before {
   border-radius: 16px;
   padding: 20px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-  transition: transform 0.4s ease, box-shadow 0.4s;
+  transition: all 0.4s ease;
+  opacity: 1;
 }
 .section-box:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  opacity: 0.94;
 }
 
 .tagline {
@@ -199,7 +212,7 @@ li::before {
   color: #4a148c;
   margin-top: 25px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  animation: slideFade 2s ease-out forwards;
+  animation: bounceGlow 3s ease-in-out infinite;
 }
 
 .footer {
@@ -254,8 +267,8 @@ li::before {
   .section-box { flex: 1 1 100%; }
   .container { padding: 15px 10px; }
 }
+</style>
 
-  </style>
 </head>
 <body>
 
