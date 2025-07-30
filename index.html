@@ -267,6 +267,18 @@ li::before {
   .section-box { flex: 1 1 100%; }
   .container { padding: 15px 10px; }
 }
+  .container:hover,
+.director:hover,
+.section-box:hover,
+.tagline:hover,
+.footer:hover {
+  transform: scale(1.01);
+  filter: brightness(1.02);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
 </style>
 
 </head>
