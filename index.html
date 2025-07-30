@@ -8,7 +8,6 @@
   <meta name="keywords" content="RS-CIT Online Test, Ashish Vijayvargiya Foundation, Computer Classes, Steno, Typing, Rajasthan Exam" />
   <meta name="author" content="Ashish Vijayvargiya Foundation" />
 
-  <!-- Open Graph / Social Media -->
   <meta property="og:title" content="UIIT RS-CIT Online Test Portal" />
   <meta property="og:description" content="Boost your RS-CIT preparation with smart practice, instant results, and rankings." />
   <meta property="og:image" content="https://raw.githubusercontent.com/uiitcomputer/portal/main/500x225.jpg" />
@@ -16,222 +15,274 @@
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <style>
-    * {margin:0; padding:0; box-sizing:border-box;}
+    * {margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth;}
     body {
       font-family:'Inter',sans-serif;
-      background:linear-gradient(135deg,#f9f3ff,#fff0f5);
+      background:linear-gradient(135deg,#e6f0ff,#f9eaff);
       color:#2c2c3e; margin:0 5vw; font-size:1rem; line-height:1.6;
-      animation:fadeIn 1s ease-in-out;
     }
-    @keyframes fadeIn {from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);}}
-
+    header, .container, .footer, .section-box, .tagline, .director {
+      animation:fadeIn 1s ease-in-out both;
+    }
+    @keyframes fadeIn {
+      from {opacity:0; transform:translateY(20px);}
+      to {opacity:1; transform:translateY(0);}
+    }
     @keyframes shine {
       0% { background-position: 0% center; }
       100% { background-position: 200% center; }
     }
 
     header {
-      background:linear-gradient(90deg,#6a11cb,#2575fc);
+      background:linear-gradient(90deg,#0052D4,#6FB1FC);
       padding:20px; display:flex; align-items:center; justify-content:space-between;
       flex-wrap:wrap; border-radius:0 0 18px 18px; box-shadow:0 4px 12px rgba(0,0,0,0.1); color:#fff;
     }
-
     .logo-img {
-      width:110px;
-      height:110px;
-      border-radius:12px;
-      object-fit:cover;
-      border:2px solid #fff;
-      background:#fff;
+      width:110px; height:110px; border-radius:12px; object-fit:cover;
+      border:2px solid #fff; background:#fff;
     }
-
     h1 {
       font-family: 'Poppins', sans-serif;
-      font-size: 1.8rem;
-      margin-bottom: 4px;
-      background: linear-gradient(90deg, #ffd3e0, #c8e4ff, #ffd3e0);
+      font-size: 2rem;
+      background: linear-gradient(90deg, #c3eaff, #ffdee9);
       background-size: 300% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: shine 5s linear infinite;
-      text-shadow: 0 0 8px rgba(255, 182, 193, 0.6), 0 0 12px rgba(173, 216, 230, 0.5);
+      animation: shine 4s linear infinite;
+      text-shadow: 0 0 8px rgba(0, 170, 255, 0.4);
     }
-
     .header-title p {
-      font-size:1rem;
-      color:#fff0e0;
-      text-shadow: 0 0 3px #ffae42, 0 0 6px #ff4500;
-      font-weight: 500;
+      font-size:1rem; color:#eaffff; font-weight:500;
+      text-shadow: 0 0 3px #6FB1FC, 0 0 6px #0052D4;
     }
-
     .start-button {
-      background:linear-gradient(45deg,#00c6ff,#0072ff); color:#fff; padding:10px 24px;
-      text-decoration:none; border-radius:8px; font-size:1rem; font-weight:700;
-      box-shadow:0 4px 10px rgba(0,0,0,0.2); transition:all .3s;
+      background:linear-gradient(45deg,#00b09b,#96c93d);
+      color:#fff; padding:12px 28px; text-decoration:none;
+      border-radius:8px; font-size:1rem; font-weight:700;
+      box-shadow:0 6px 20px rgba(0,0,0,0.2); transition:all .3s;
     }
-
     .start-button:hover {
       transform:scale(1.05);
-      background:linear-gradient(45deg,#0099ff,#005eff);
+      background:linear-gradient(45deg,#11998e,#38ef7d);
     }
 
     .container {
-      max-width:1200px; margin:30px auto; padding:20px; background:rgba(255,255,255,0.92);
-      backdrop-filter:blur(8px); border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06);
+      max-width:1200px; margin:30px auto; padding:20px;
+      background:rgba(255,255,255,0.95);
+      backdrop-filter:blur(6px); border-radius:16px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.08);
     }
-
     h3 {
-      color:#6a11cb; font-weight:600; font-size:1.2rem; margin-bottom:10px;
-      border-left:4px solid #2575fc; padding-left:8px;
+      color:#0066cc; font-weight:600; font-size:1.2rem; margin-bottom:10px;
+      border-left:4px solid #6fb1fc; padding-left:10px;
     }
-
     ul {list-style:none; padding-left:18px;}
-    li {padding:5px 0; font-size:0.95rem; color:#3e3e5e; position:relative;}
-    li::before {content:"✔"; position:absolute; left:-18px; color:#00b894; font-weight:bold;}
+    li {padding:6px 0; font-size:0.96rem; color:#333; position:relative;}
+    li::before {content:"✔"; position:absolute; left:-18px; color:#2196f3; font-weight:bold;}
 
     .director {
-      display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;
-      margin-top:20px; padding:15px; background:#f3f7ff; border-radius:12px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05); gap:20px;
+      display:flex; justify-content:space-between; align-items:center;
+      flex-wrap:wrap; margin-top:20px; padding:15px;
+      background:#f0f9ff; border-radius:14px;
+      box-shadow:0 4px 16px rgba(0,0,0,0.06); gap:20px;
     }
-
     .director img {
-      width:90px; height:90px; border-radius:50%; border:3px solid #6a11cb;
-      background:#fff;
+      width:90px; height:90px; border-radius:50%; border:3px solid #6fb1fc; background:#fff;
     }
-
     .itkg-code {
-      font-weight:bold; color:#6a11cb; border:2px solid #6a11cb; padding:5px 10px; border-radius:8px;
+      font-weight:bold; color:#0066cc; border:2px solid #6fb1fc;
+      padding:5px 10px; border-radius:8px;
     }
 
     .dual-section {
-      display:flex; flex-wrap:wrap; gap:25px; margin-top:20px;
+      display:flex; flex-wrap:wrap; gap:25px; margin-top:25px;
     }
-
     .section-box {
-      flex:1 1 45%; background:#eef5ff; backdrop-filter:blur(6px);
-      border-radius:10px; padding:15px;
-      box-shadow:0 3px 10px rgba(0,0,0,0.05);
-      transition:transform 0.3s ease; text-align:left;
+      flex:1 1 45%; background:#e6f4ff;
+      border-radius:12px; padding:18px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.06);
+      transition:transform 0.4s ease, box-shadow 0.4s;
     }
-
     .section-box:hover {
-      transform:translateY(-4px);
+      transform:translateY(-6px); box-shadow:0 10px 24px rgba(0,0,0,0.08);
     }
 
     .tagline {
-      background:linear-gradient(90deg,#e0ffe6,#e6f0ff); padding:10px;
-      font-weight:bold; font-size:1rem;
-      border-radius:8px; text-align:center; color:#2e5a88;
-      margin-top:20px; box-shadow:0 3px 10px rgba(0,0,0,0.05);
+      background:linear-gradient(90deg,#f9fbe7,#e1f5fe);
+      padding:12px; font-weight:600; font-size:1.05rem;
+      border-radius:10px; text-align:center; color:#33691e;
+      margin-top:25px; box-shadow:0 4px 12px rgba(0,0,0,0.05);
     }
 
     .footer {
-      background:linear-gradient(90deg,#6a11cb,#2575fc); color:#fff; border-radius:8px;
-      margin-top:35px; text-align:center; padding:18px; font-size:0.9rem;
+      background:linear-gradient(90deg,#0052D4,#6FB1FC);
+      color:#fff; border-radius:10px;
+      margin-top:40px; text-align:center; padding:20px; font-size:0.95rem;
     }
-
     .footer-content {
       display:flex; justify-content:space-between; align-items:center;
-      flex-wrap:wrap; gap:8px;
+      flex-wrap:wrap; gap:10px;
     }
-
     .footer-banner {
-      font-size:1rem; font-weight:bold; background:linear-gradient(90deg,#ffefba,#ffffff,#ffefba);
+      font-size:1rem; font-weight:600;
+      background:linear-gradient(90deg,#ffffff,#e6f0ff);
       -webkit-background-clip:text; -webkit-text-fill-color:transparent;
     }
-
     .visitor-count {
-      font-weight:bold; background:rgba(255,255,255,0.2);
-      padding:4px 8px; border-radius:6px;
+      font-weight:600; background:rgba(255,255,255,0.15);
+      padding:4px 10px; border-radius:8px;
     }
-
-    .social-links {
-      display:flex; gap:8px;
-    }
-
-    .social-links a {
-      color:#fff; font-size:1.2rem; transition:color .3s;
-    }
-
-    .social-links a:hover {
-      color:#ffddf4;
-    }
+    .social-links {display:flex; gap:10px;}
+    .social-links a {color:#fff; font-size:1.2rem; transition:color .3s;}
+    .social-links a:hover {color:#e6f0ff;}
 
     @media(max-width:768px){
       body{margin:0 3vw;}
       header, .director, .footer-content {flex-direction:column; text-align:center;}
-      h1{font-size:1.4rem;}
+      h1{font-size:1.5rem;}
       .section-box{flex:1 1 100%;}
       .container {padding:15px 10px;}
     }
   </style>
 </head>
 <body>
-  <header>
-    <img class="logo-img" src="https://raw.githubusercontent.com/uiitcomputer/portal/main/500x225.jpg" alt="Logo" loading="lazy">
-    <div class="header-title">
-      <h1>Ashish Vijayvargiya Foundation</h1>
-      <p>Smart RS-CIT Preparation, Proudly Made in Rajasthan</p>
-    </div>
-    <a href="https://script.google.com/macros/s/AKfycbwrcmC9q7K1L0dML6Ul982ddkrw0ULYqTuuKk20XpKC4jd9fIC4jzyHm96reYgVSLSr/exec" class="start-button">🚀 Start Test Now</a>
-  </header>
 
-  <div class="container">
+<header>
+  <img class="logo-img" alt="Logo Placeholder" loading="lazy">
+  <div class="header-title">
+    <h1>Ashish Vijayvargiya Foundation</h1>
+    <p>Make RS-CIT Exam Success Easy & Digital!</p>
+  </div>
+  <a href="https://script.google.com/macros/s/AKfycbwrcmC9q7K1L0dML6Ul982ddkrw0ULYqTuuKk20XpKC4jd9fIC4jzyHm96reYgVSLSr/exec" class="start-button">🚀 Start Test Now</a>
+</header>
+
+<div class="container">
+  <div class="director">
+    <img alt="Director Image Placeholder" loading="lazy">
+    <div class="director-info">
+      <strong>👨‍🏫 Director: Ashish Vijayvargiya</strong><br>
+      <em>A visionary leader dedicated to digital learning and student success through quality computer education.</em>
+    </div>
+    <div class="itkg-code">ITGK Code: 21291234</div>
+  </div>
+
+
+  <div class="dual-section">
     <div class="section-box">
-      <h3>📌 Why Choose Us?</h3>
+      <h3>📌 Key Features</h3>
       <ul>
-        <li>Mobile & Desktop Optimized</li>
-        <li>Live Exam Simulation</li>
-        <li>Instant Results & Performance Reports</li>
-        <li>Support in Hindi & English</li>
+        <li>Mobile & Desktop Friendly Interface</li>
+        <li>Real-time Test Experience</li>
+        <li>Instant Results & Reports</li>
+        <li>Hindi & English Support</li>
       </ul>
     </div>
-
     <div class="section-box">
-      <h3>📚 RS-CIT Study Materials</h3>
+      <h3>📚 RS-CIT Content</h3>
       <ul>
-        <li>Previous Papers & iLearn Modules</li>
-        <li>Easy-to-Understand Notes</li>
-        <li>Topic-Wise Practice Questions</li>
-        <li>Smart Tips & Tricks</li>
+        <li>Previous Papers & iLearn Q&A</li>
+        <li>Chapter-wise Questions</li>
+        <li>Easy Notes & Question Bank</li>
+        <li>Smart Techniques for Success</li>
       </ul>
-    </div>
-
-    <div class="section-box">
-      <h3>🏆 Ranking & Analytics</h3>
-      <ul>
-        <li>Institute-Level Leaderboard</li>
-        <li>Compare State-wide Rankings</li>
-        <li>Progress Tracking & Analytics</li>
-      </ul>
-    </div>
-
-    <div class="tagline">✨ Skill Bot Enabled – Practice Smart. Succeed Faster! ✨</div>
-
-    <div class="section-box">
-      <h3>📍 Contact</h3>
-      <p><strong>Office:</strong> 29, Sethi Colony, Jaipur 302003</p>
-      <p><strong>Email:</strong> ashishvijayvargiyafoundation@gmail.com</p>
-      <p><strong>Call:</strong> 9509403529 / 9509403511</p>
     </div>
   </div>
 
-  <footer class="footer">
-    <div>© 2025 Ashish Vijayvargiya Foundation | Powered by AI & Passion</div>
-    <div class="social-links">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
-      <a href="#"><i class="fab fa-telegram"></i></a>
+  <div class="dual-section">
+    <div class="section-box">
+      <h3>✍️ Practice & Exam Modes</h3>
+      <ul>
+        <li>Practice Mode: Learn at your pace</li>
+        <li>Exam Mode: Real exam environment</li>
+      </ul>
     </div>
-  </footer>
+    <div class="section-box">
+      <h3>🏆 Ranking System</h3>
+      <ul>
+        <li>Institute-Level: Compare with your batch</li>
+        <li>State-Level: Compete across Rajasthan</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="tagline">🤖 Skill Bot Live - Smart Practice for RS-CIT Success!”</div>
+
+  <div class="dual-section">
+    <div class="section-box">
+      <h3>📍 Contact Us</h3>
+      <p><strong>🏫 Address:</strong> Office No. 29, Sethi Colony, Gurudwara Mode, Transport Nagar, Jaipur 302003</p>
+      <p><strong>📧 Email:</strong> Ashishvijayvargiyafoundation@gmail.com</p>
+      <p><strong>📞 Mobile:</strong> 9509403529, 9509403511</p>
+    </div>
+    <div class="section-box">
+      <img src="https://raw.githubusercontent.com/uiitcomputer/portal/main/500x225.jpg" alt="Students at UIIT Institute" style="width:100%; max-width:300px; border-radius:10px; border:2px solid #4e54c8;" loading="lazy">
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-content">
+      <div id="visitorCount" class="visitor-count">Visitor Count: 100</div>
+      <div class="footer-banner">✨ डिजिटल राजस्थान की ओर – एक सशक्त कदम! ✨</div>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+      </div>
+    </div>
+   © 2025 AK Sharma (Online Test Web Portal)
+  </div>
+</div>
+
+<!-- Visitor Count Script -->
+<script>
+  let count = parseInt(localStorage.getItem('visitorCount') || "99", 10); // Starts from 99
+  count++;
+  localStorage.setItem('visitorCount', count);
+  window.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('visitorCount').textContent = `Visitor Count: ${count}`;
+  });
+</script>
+
+<!-- Security Script -->
+<script>
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('cut', e => e.preventDefault());
+  document.addEventListener('copy', e => e.preventDefault());
+  document.addEventListener('paste', e => e.preventDefault());
+  document.addEventListener('keydown', function (e) {
+    if (
+      e.ctrlKey && ['c', 'x', 'u', 'v'].includes(e.key.toLowerCase()) ||
+      (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') ||
+      e.key === 'F12'
+    ) {
+      e.preventDefault();
+    }
+  });
+  document.addEventListener('selectstart', e => e.preventDefault());
+  window.addEventListener('keyup', function (e) {
+    if (e.key === 'PrintScreen') {
+      navigator.clipboard.writeText('');
+      alert('Screenshot disabled!');
+    }
+  });
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) {
+      navigator.clipboard.writeText('');
+    }
+  });
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ once: true, duration: 800 });</script>
 </body>
 </html>
+
