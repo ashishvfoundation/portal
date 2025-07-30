@@ -4,163 +4,173 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ashish Vijayvargiya Foundation</title>
-  <meta name="description" content="Practice RS-CIT online tests with real exam experience, instant results, and smart features by Ashish Vijayvargiya Foundation." />
-  <meta name="keywords" content="RS-CIT Test, Online Learning, Steno, Typing, Computer Classes, Rajasthan" />
+  <meta name="description" content="Ashish Vijayvargiya Foundation - Practice RS-CIT online tests with real exam experience, instant results, Hindi & English content, and smart ranking system." />
+  <meta name="keywords" content="RS-CIT Online Test, Ashish Vijayvargiya Foundation, Computer Classes, Steno, Typing, Rajasthan Exam" />
   <meta name="author" content="Ashish Vijayvargiya Foundation" />
 
-  <!-- Social Meta Tags -->
-  <meta property="og:title" content="Ashish Vijayvargiya Foundation - RS-CIT Online Test" />
-  <meta property="og:description" content="Smart Practice, Real Exam Mode, Instant Results." />
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="UIIT RS-CIT Online Test Portal" />
+  <meta property="og:description" content="Boost your RS-CIT preparation with smart practice, instant results, and rankings." />
   <meta property="og:image" content="https://raw.githubusercontent.com/uiitcomputer/portal/main/500x225.jpg" />
+  <meta property="og:url" content="https://yourwebsite.com" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {margin:0; padding:0; box-sizing:border-box;}
     body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom right, #ffe6f0, #e6f2ff);
-      color: #2d2d3a;
-      animation: fadeIn 1s ease-in-out;
+      font-family:'Inter',sans-serif;
+      background:linear-gradient(135deg,#f9f3ff,#fff0f5);
+      color:#2c2c3e; margin:0 5vw; font-size:1rem; line-height:1.6;
+      animation:fadeIn 1s ease-in-out;
     }
+    @keyframes fadeIn {from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);}}
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes shine {
+      0% { background-position: 0% center; }
+      100% { background-position: 200% center; }
     }
 
     header {
-      background: linear-gradient(to right, #6a11cb, #2575fc);
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      color: #fff;
-      border-radius: 0 0 20px 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      background:linear-gradient(90deg,#6a11cb,#2575fc);
+      padding:20px; display:flex; align-items:center; justify-content:space-between;
+      flex-wrap:wrap; border-radius:0 0 18px 18px; box-shadow:0 4px 12px rgba(0,0,0,0.1); color:#fff;
     }
 
     .logo-img {
-      width: 100px;
-      height: 100px;
-      border-radius: 12px;
-      object-fit: cover;
-      border: 2px solid #fff;
-      background: #fff;
+      width:110px;
+      height:110px;
+      border-radius:12px;
+      object-fit:cover;
+      border:2px solid #fff;
+      background:#fff;
     }
 
-    .header-title h1 {
-      font-family: 'Montserrat', sans-serif;
+    h1 {
+      font-family: 'Poppins', sans-serif;
       font-size: 1.8rem;
-      background: linear-gradient(90deg, #ffedbc, #ed4264);
+      margin-bottom: 4px;
+      background: linear-gradient(90deg, #ffd3e0, #c8e4ff, #ffd3e0);
+      background-size: 300% auto;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: textShine 6s linear infinite;
+      animation: shine 5s linear infinite;
+      text-shadow: 0 0 8px rgba(255, 182, 193, 0.6), 0 0 12px rgba(173, 216, 230, 0.5);
     }
 
-    @keyframes textShine {
-      0% { background-position: 0%; }
-      100% { background-position: 200%; }
+    .header-title p {
+      font-size:1rem;
+      color:#fff0e0;
+      text-shadow: 0 0 3px #ffae42, 0 0 6px #ff4500;
+      font-weight: 500;
     }
 
     .start-button {
-      background: linear-gradient(45deg, #00c6ff, #0072ff);
-      color: #fff;
-      padding: 12px 26px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1rem;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, background 0.3s ease;
+      background:linear-gradient(45deg,#00c6ff,#0072ff); color:#fff; padding:10px 24px;
+      text-decoration:none; border-radius:8px; font-size:1rem; font-weight:700;
+      box-shadow:0 4px 10px rgba(0,0,0,0.2); transition:all .3s;
     }
 
     .start-button:hover {
-      transform: scale(1.05);
-      background: linear-gradient(45deg, #0099ff, #005eff);
+      transform:scale(1.05);
+      background:linear-gradient(45deg,#0099ff,#005eff);
     }
 
     .container {
-      max-width: 1200px;
-      margin: 30px auto;
-      padding: 20px;
-      background: rgba(255,255,255,0.95);
-      border-radius: 16px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      max-width:1200px; margin:30px auto; padding:20px; background:rgba(255,255,255,0.92);
+      backdrop-filter:blur(8px); border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.06);
     }
 
     h3 {
-      color: #6a11cb;
-      margin-bottom: 10px;
-      border-left: 4px solid #2575fc;
-      padding-left: 10px;
-      font-weight: 600;
+      color:#6a11cb; font-weight:600; font-size:1.2rem; margin-bottom:10px;
+      border-left:4px solid #2575fc; padding-left:8px;
     }
 
-    ul { list-style: none; padding-left: 20px; }
-    li { padding: 5px 0; position: relative; }
-    li::before {
-      content: '\f058';
-      font-family: 'Font Awesome 6 Free';
-      font-weight: 900;
-      position: absolute;
-      left: -20px;
-      color: #4caf50;
+    ul {list-style:none; padding-left:18px;}
+    li {padding:5px 0; font-size:0.95rem; color:#3e3e5e; position:relative;}
+    li::before {content:"✔"; position:absolute; left:-18px; color:#00b894; font-weight:bold;}
+
+    .director {
+      display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;
+      margin-top:20px; padding:15px; background:#f3f7ff; border-radius:12px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.05); gap:20px;
+    }
+
+    .director img {
+      width:90px; height:90px; border-radius:50%; border:3px solid #6a11cb;
+      background:#fff;
+    }
+
+    .itkg-code {
+      font-weight:bold; color:#6a11cb; border:2px solid #6a11cb; padding:5px 10px; border-radius:8px;
+    }
+
+    .dual-section {
+      display:flex; flex-wrap:wrap; gap:25px; margin-top:20px;
     }
 
     .section-box {
-      background: #f1f9ff;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 20px;
-      transition: transform 0.3s;
+      flex:1 1 45%; background:#eef5ff; backdrop-filter:blur(6px);
+      border-radius:10px; padding:15px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.05);
+      transition:transform 0.3s ease; text-align:left;
     }
 
     .section-box:hover {
-      transform: translateY(-5px);
+      transform:translateY(-4px);
     }
 
     .tagline {
-      font-size: 1rem;
-      font-weight: bold;
-      background: linear-gradient(90deg,#ffe6f0,#d0e8ff);
-      padding: 10px;
-      border-radius: 10px;
-      text-align: center;
-      margin-top: 25px;
-      color: #4b2c5e;
+      background:linear-gradient(90deg,#e0ffe6,#e6f0ff); padding:10px;
+      font-weight:bold; font-size:1rem;
+      border-radius:8px; text-align:center; color:#2e5a88;
+      margin-top:20px; box-shadow:0 3px 10px rgba(0,0,0,0.05);
     }
 
     .footer {
-      background: linear-gradient(to right, #6a11cb, #2575fc);
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      border-radius: 0 0 20px 20px;
-      margin-top: 40px;
+      background:linear-gradient(90deg,#6a11cb,#2575fc); color:#fff; border-radius:8px;
+      margin-top:35px; text-align:center; padding:18px; font-size:0.9rem;
+    }
+
+    .footer-content {
+      display:flex; justify-content:space-between; align-items:center;
+      flex-wrap:wrap; gap:8px;
+    }
+
+    .footer-banner {
+      font-size:1rem; font-weight:bold; background:linear-gradient(90deg,#ffefba,#ffffff,#ffefba);
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+    }
+
+    .visitor-count {
+      font-weight:bold; background:rgba(255,255,255,0.2);
+      padding:4px 8px; border-radius:6px;
+    }
+
+    .social-links {
+      display:flex; gap:8px;
     }
 
     .social-links a {
-      color: #fff;
-      margin: 0 10px;
-      font-size: 1.2rem;
-      transition: color 0.3s ease;
+      color:#fff; font-size:1.2rem; transition:color .3s;
     }
 
     .social-links a:hover {
-      color: #ffddf4;
+      color:#ffddf4;
     }
 
-    @media(max-width: 768px) {
-      header, .footer, .section-box, .start-button {
-        text-align: center;
-        margin: auto;
-      }
+    @media(max-width:768px){
+      body{margin:0 3vw;}
+      header, .director, .footer-content {flex-direction:column; text-align:center;}
+      h1{font-size:1.4rem;}
+      .section-box{flex:1 1 100%;}
+      .container {padding:15px 10px;}
     }
   </style>
 </head>
